@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Tytuł strony</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen"/>
+</head>
+<body>
+<div class="container">
+    <header class="row py-2 align-items-center">
+        <div class="col-2 pt-1">
+            <img class="img-fluid" src="images/logo.jpg" alt="logo">
+        </div>
+        <div class="col-10 text-left pl-5">
+            <h1>Tytuł strony</h1>
+        </div>
+    </header>
+    <nav class="row navbar navbar-expand-sm border border-dark">
+        <ul class="navbar-nav w-100">
+            <li class="nav-item mx-auto"><a class="nav-link" href="#">Nav 1</a></li>
+            <li class="nav-item mx-auto"><a class="nav-link" href="#">Nav 2</a></li>
+            <li class="nav-item mx-auto"><a class="nav-link" href="#">Nav 3</a></li>
+            <li class="nav-item mx-auto"><a class="nav-link" href="#">Nav 4</a></li>
+        </ul>
+    </nav>
+</div>
+<main role="main">
+    <section class="container">
+        <div class="row">
+            <section class="col-lg-6 mt-3 px-0">
+                <article>
+                    <h2 class="h3 position-absolute fixed-top mt-4 pt-2 pl-5 font-weight-bold">Wiadomość #1</h2>
+                    <img class="img-fluid w-100" src="images/artykul-img.jpg" alt="logo">
+                    <p class=" font-weight-bold position-absolute fixed-top mt-5 pt-5 px-5">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Integer malesuada quam ut eros
+                        vestibulum
+                        rutrum. Suspendisse potenti. Nulla dictum commodo dolor et placerat. Sed eu velit consequat,
+                        tristique neque sit amet, dignissim odio. Aliquam erat volutpat.</p>
+                </article>
+            </section>
+
+            <section class="offset-lg-1 col-lg-5 border border-dark mt-3">
+                <h2>Wiadomości</h2>
+                <ul class="list-group">
+                    <li class="list-group-item border-dark border-right-0 border-left-0">
+                        <a href="#">Curabitur tincidunt orci est, ut eleifend mi ullamcorper et. Pellentesque in libero
+                            dapibus, sagittis neque non, auctor libero. </a>
+                    </li>
+                    <li class="list-group-item border-dark border-right-0 border-left-0">
+                        <a href="#">Pellentesque dapibus, risus non iaculis feugiat, risus augue blandit diam, a
+                            tristique
+                            mauris ligula non orci</a>
+                    </li>
+                    <li class="list-group-item border-dark border-right-0 border-left-0">
+                        <a href="#">Am gravida lorem et lacus fringilla pharetra. Duis dignissim, magna sed maximus
+                            gravida,
+                            odio nibh mattis ipsum, vel euismod est est sit amet risus. </a>
+                    </li>
+                    <li class="list-group-item border-dark border-right-0 border-left-0 border-bottom-0">
+                        <a href="#">Cras dapibus luctus ipsum ut condimentum. Fusce dignissim efficitur purus, eu
+                            condimentum justo sodales id. </a>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+
+        <section class="row inline-block border border-dark mt-4">
+            <div class="col-lg-4 col-md-12 d-flex">
+                <span class="d-flex flex-column order-2 my-auto ml-4">
+                  <span class="h4">Kraków</span>
+                  <span class="font-italic">Słonecznie</span>
+                  <span>13 &deg;C</span>
+                  <span></span>
+                </span>
+                <span class="order-1">
+                  <img src="images/weather.png" alt="icon partially sunny day">
+                </span>
+            </div>
+            <div class="col-lg-8">
+                <ul class="list-group list-group-horizontal-sm list-group-flush">
+                    <li class="list-group-item d-flex flex-column align-items-center mx-auto">
+                        <span class="d-flex">Pon</span>
+                        <img class="d-flex rounded-circle" src="images/sunny.png" alt="icon sunny day">
+                        <span class="d-flex">23 &deg;C</span>
+                    </li>
+                    <li class="list-group-item d-flex flex-column align-items-center mx-auto">
+                        <span>Wt</span>
+                        <img class="rounded-circle" src="images/cloudy.png" alt="icon cloudy day">
+                        <span>16 &deg;C</span>
+                    </li>
+                    <li class="list-group-item d-flex flex-column align-items-center mx-auto">
+                        <span>Śr</span>
+                        <img class="rounded-circle" src="images/cloudy.png" alt="icon cloudy day">
+                        <span>20 &deg;C</span>
+                    </li>
+                    <li class="list-group-item d-flex flex-column align-items-center mx-auto">
+                        <span>Czw</span>
+                        <img class="rounded-circle" src="images/rain.png" alt="icon rainy day">
+                        <span>19 &deg;C</span>
+                    </li>
+                    <li class="list-group-item d-flex flex-column align-items-center mx-auto">
+                        <span>Pt</span>
+                        <img class="rounded-circle" src="images/sunny.png" alt="icon sunny day">
+                        <span>18 &deg;C</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </section>
+
+    <footer class="container px-0 border-top border-dark mt-3">
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item border-0"><a href="#">Kontakt</a></li>
+            <li class="list-group-item border-0"><a href="#">Facebook</a></li>
+            <li class="list-group-item border-0"><a href="#">Twitter</a></li>
+        </ul>
+    </footer>
+</main>
+</body>
+</html>
