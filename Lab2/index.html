@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <title>Kólko krzyżyk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css"/>
+</head>
+<body>
+<main>
+    <div class="wrapper">
+        <div id="marker-picker">
+            <h1>Wybierz marker</h1>
+            <div>
+                <svg id="nought">
+                    <circle r='25' cx='50' cy='50'/>
+                </svg>
+                <svg id="cross">
+                    <line x1="25" y1="25" x2="75" y2="75"></line>
+                    <line x1="25" y1="75" x2="75" y2="25"></line>
+                </svg>
+            </div>
+        </div>
+
+        <hr>
+
+        <table id="board">
+            <tr>
+                <td class="cell" id="0"></td>
+                <td class="cell" id="1"></td>
+                <td class="cell" id="2"></td>
+            </tr>
+            <tr>
+                <td class="cell" id="3"></td>
+                <td class="cell" id="4"></td>
+                <td class="cell" id="5"></td>
+            </tr>
+            <tr>
+                <td class="cell" id="6"></td>
+                <td class="cell" id="7"></td>
+                <td class="cell" id="8"></td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <button class="button" onClick="begin()">
+            Od nowa
+        </button>
+    </div>
+</main>
+
+<div id="toast">
+    <div id="toast__result">Wynik</div>
+    <div id="toast__message"></div>
+</div>
+
+<script src="tictactoe.js"></script>
+</body>
+</html>

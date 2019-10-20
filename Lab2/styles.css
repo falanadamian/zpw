@@ -1,0 +1,243 @@
+html, body {
+  height: 100%;
+  margin: auto;
+  vertical-align: middle;
+}
+
+main {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+.wrapper {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+
+table {
+  display: inline-block;
+}
+table tr:first-child td {
+  border-top: 0;
+}
+table tr:last-child td {
+  border-bottom: 0;
+}
+table tr td:first-child {
+  border-left: 0;
+}
+table tr td:last-child {
+  border-right: 0;
+}
+
+td {
+  border: 2px solid darkmagenta;
+  height: 110px;
+  width: 110px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+svg {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+}
+
+line {
+  fill: transparent;
+  stroke: darkslateblue;
+  stroke-width: 5px;
+  stroke-dashoffset: 0px;
+  stroke-dasharray: 80px;
+  animation: draw-cross 1s forwards;
+}
+
+@keyframes draw-cross {
+  from {
+    stroke-dashoffset: 80px;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+circle {
+  --circle-len: 314.16px;
+  fill: none;
+  stroke: darksalmon;
+  stroke-width: 5px;
+  stroke-dasharray: var(--circle-len);
+  stroke-dashoffset: var(--circle-len);
+  animation: draw-circle 1s linear forwards;
+}
+
+@keyframes draw-circle {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+.button {
+  width: 200px;
+  line-height: 60px;
+  display: inline-block;
+  background-color: darkmagenta;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.5s, font-size 0.2s;
+  cursor: pointer;
+  font-size: 1.25em;
+  position: relative;
+}
+.button:after {
+  left: 50%;
+  right: 50%;
+  height: 4px;
+  background-color: blue;
+  bottom: -4px;
+  content: "";
+  opacity: 0;
+  position: absolute;
+  transition: left 0.5s, right 0.5s, opacity 0.5s;
+}
+.button:hover {
+  font-size: 1.5em;
+  background-color: darkred;
+}
+.button:hover:after {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+#toast {
+  visibility: hidden;
+  max-width: 50px;
+  height: 50px;
+  margin: auto;
+  background-color: darkmagenta;
+  color: white;
+  text-align: center;
+  border-radius: 2px;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  font-size: 17px;
+  white-space: nowrap;
+}
+#toast__result {
+  width: 75px;
+  height: 50px;
+  float: left;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+#toast__message {
+  color: white;
+  padding: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes expand {
+  from {
+    min-width: 50px;
+  }
+  to {
+    min-width: 350px;
+  }
+}
+@keyframes expand {
+  from {
+    min-width: 50px;
+  }
+  to {
+    min-width: 350px;
+  }
+}
+@-webkit-keyframes stay {
+  from {
+    min-width: 350px;
+  }
+  to {
+    min-width: 350px;
+  }
+}
+@keyframes stay {
+  from {
+    min-width: 350px;
+  }
+  to {
+    min-width: 350px;
+  }
+}
+@-webkit-keyframes shrink {
+  from {
+    min-width: 350px;
+  }
+  to {
+    min-width: 50px;
+  }
+}
+@keyframes shrink {
+  from {
+    min-width: 350px;
+  }
+  to {
+    min-width: 50px;
+  }
+}
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 60px;
+    opacity: 0;
+  }
+}
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 60px;
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
