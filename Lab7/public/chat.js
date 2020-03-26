@@ -1,5 +1,5 @@
 $(function(){
-	var socket = io.connect('http://localhost:3000');
+	var socket = io.connect('http://chatapp-env.eba-brdv3hwe.eu-central-1.elasticbeanstalk.com');
 
 	var message = $("#message");
 	var username = $("#username");

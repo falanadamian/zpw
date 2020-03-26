@@ -2,9 +2,9 @@
   "name": "ChatApp",
   "version": "1.0.0",
   "description": "Chat application built with node.js and socket.io",
-  "main": "app.js",
+  "main": "main.js",
   "scripts": {
-    "start": "nodemon app"
+    "start": "nodemon main"
   },
   "author": "Damian Falana",
   "dependencies": {

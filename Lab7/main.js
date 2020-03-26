@@ -20,14 +20,34 @@ const connector = mongoose.connect(CONNECTION_URL, { useNewUrlParser: true });
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
+const CACHE_CONTROL = process.env.CACHE_CONTROL || 'public';
+
 app.get('/', (req, res) => {
     Message.find({}).sort({'sent': 'desc'}).exec((err, docs) => {
         console.log(docs);
+		res.set('Cache-Control', CACHE_CONTROL);
         res.render('index', {messagesArray: docs});
     });
 });
 
-server = app.listen(3000);
+app.get('/json', (req, res) => {
+	const object = {
+  "name":"John",
+  "age":30,
+  "cars": {
+    "car1":"Ford",
+    "car2":"BMW",
+    "car3":"Fiat"
+  }
+ };
+ 
+		res.set('Cache-Control', CACHE_CONTROL);
+		res.json(object);
+	
+});
+
+app.set('port', process.env.PORT || 3000);
+server = app.listen(app.get('port'));
 
 const io = require("socket.io")(server);
 
